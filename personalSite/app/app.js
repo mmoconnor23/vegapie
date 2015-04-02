@@ -6,7 +6,10 @@ angular.module('mySite', [
   'mySite.about',
   'mySite.version',
   'ui.router'
-]).
-config( function( $urlRouterProvider ) {
-  $urlRouterProvider.otherwise( '/about' );
-});
+])
+.run( [ '$state', function( $state ) {
+	$state.transitionTo( 'about' );
+}])
+.config( [ '$urlRouterProvider', function( $urlRouterProvider ) {
+  $urlRouterProvider.otherwise( 'about' );
+}]);
