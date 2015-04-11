@@ -1,0 +1,14 @@
+md-grid-tile-header {
+	background: #D1C4E9;
+}
+
+.tile {
+	background: #D1C4E9;
+	height: 50%;
+	width: 100%;
+}
+
+.tile button {
+	margin-left: auto;
+	margin-right: auto;
+}

@@ -1,1 +1,26 @@
-Melissa Mattingly O'Connor
+<md-content class="md-padding" ng-controller="homeCtrl as homeCtrl">
+		<p>Melissa Mattingly O'Connor</p>
+		<md-grid-list md-cols="3"
+					  md-cols-sm="1"
+					  md-cols-md="2"
+					  md-row-height="200px"
+					  class="md-primary">
+			<md-grid-tile ng-repeat="sc in homeCtrl.shortcuts">
+				<md-grid-tile-header>
+					{{sc.name}}
+				</md-grid-tile-header>
+				<div layout="column" class="tile">
+					<span class="md-primary">
+						{{sc.description}}
+					</span>
+					<md-button class="md-raised md-primary"
+							   aria-label="{{sc.name}}"
+							   ui-sref="{{sc.link}}"
+							   ng-click="homeCtrl.onButtonPress(sc)">
+						<md-icon md-svg-src="{{sc.icon}}"></md-icon>
+						{{sc.name}}
+					</md-button>
+				</div>
+			</md-grid-tile>
+		</md-grid-list>
+</md-content>

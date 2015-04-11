@@ -3,9 +3,9 @@
 // Declare app level module which depends on views, and components
 angular.module('mySite', [
   'mySite.home',
-  'mySite.projects',
+  'mySite.tech',
   'mySite.about',
-  'mySite.version',
+  'mySite.current',
   'ui.router',
   'ngMaterial'
 ])

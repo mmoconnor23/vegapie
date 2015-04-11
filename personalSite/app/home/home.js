@@ -9,6 +9,3 @@ angular.module('mySite.home', ['ui.router'])
   });
  });
 
-//.controller('homeCtrl', [function() {
-//
-//}]);
