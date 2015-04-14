@@ -16,6 +16,9 @@
     "protractor": "^1.1.1",
     "shelljs": "^0.2.6"
   },
+  "engines": {
+    "node":"0.10.x"
+  },
   "scripts": {
     "postinstall": "bower install",
     "prestart": "npm install",
