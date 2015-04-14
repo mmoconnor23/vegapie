@@ -21,7 +21,7 @@
     "node":"0.10.x"
   },
   "scripts": {
-    "postinstall": "bower install",
+    "postinstall": "node_modules/.bin/bower install",
     "prestart": "npm install",
     "start": "node server.js",
     "pretest": "npm install",
