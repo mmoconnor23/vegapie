@@ -5,24 +5,27 @@ function homeCtrl( appState ) {
 
 	vm.shortcuts = [
 		{
-			name: 'About Me',
+			name: 'About »',
+			header: 'About Me',
 			icon: 'img/Star_empty_font_awesome.svg',
 			description: 'Learn more about me.',
 			link: 'about',
 			tabIndex: 1
 		},
 		{
-			name: 'My Tech Background',
+			name: 'Tech »',
+			header: 'My Technical Background',
 			icon: 'img/Laptop_font_awesome.svg',
 			description: 'Past projects I\'ve worked on',
 			link: 'tech',
 			tabIndex: 2
 		},
 		{
-			name: 'My Current Work',
+			name: 'Job Experience »',
+			header: 'My Technical Work Experience',
 			icon: 'img/Building_font_awesome.svg',
-			description: 'What I\'m up to right now',
-			link: 'current',
+			description: 'The real-world technical experience I\'ve had',
+			link: 'job',
 			tabIndex: 3
 		}
 	];

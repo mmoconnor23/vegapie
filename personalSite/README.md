@@ -1,6 +1,6 @@
 TO-DO:
 ---------
-
+0. send e-mail -> google api or some other api
 1. ng-class the buttons on the toolbar so they stay indented
 2. home page
 3. about page

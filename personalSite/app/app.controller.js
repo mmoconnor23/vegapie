@@ -20,8 +20,8 @@ function appCtrl( appState ) {
 			link: 'tech'
 		},
 		{
-			name: 'Current Work',
-			link: 'current'
+			name: 'Work Experience',
+			link: 'job'
 		}
 	];
 

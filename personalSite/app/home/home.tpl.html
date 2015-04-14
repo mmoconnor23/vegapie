@@ -4,10 +4,11 @@
 					  md-cols-sm="1"
 					  md-cols-md="2"
 					  md-row-height="200px"
+					  md-gutter="5px"
 					  class="md-primary">
 			<md-grid-tile ng-repeat="sc in homeCtrl.shortcuts">
 				<md-grid-tile-header>
-					{{sc.name}}
+					{{sc.header}}
 				</md-grid-tile-header>
 				<div layout="column" class="tile">
 					<span class="md-primary">

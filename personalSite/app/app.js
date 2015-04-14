@@ -5,7 +5,7 @@ angular.module('mySite', [
   'mySite.home',
   'mySite.tech',
   'mySite.about',
-  'mySite.current',
+  'mySite.job',
   'ui.router',
   'ngMaterial'
 ])
