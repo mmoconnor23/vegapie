@@ -31,5 +31,10 @@
   },
   "dependencies": {
     "express": "^4.12.3"
-  }
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ]
 }
