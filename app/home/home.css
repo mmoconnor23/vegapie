@@ -1,0 +1,27 @@
+md-grid-tile-header {
+	background: #D1C4E9;
+	border-radius: 5px;
+	text-align: center;
+}
+
+md-grid-tile-header figcaption {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.tile {
+	background: #D1C4E9;
+	height: 50%;
+	width: 100%;
+	border-radius: 5px;
+}
+
+.tile span {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.tile button {
+	margin-left: auto;
+	margin-right: auto;
+}
