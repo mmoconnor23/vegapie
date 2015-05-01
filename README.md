@@ -17,3 +17,11 @@ Useful Links:
 * [GitHub Markdown Guide](https://guides.github.com/features/mastering-markdown/)
 * [Angular Material Design](https://material.angularjs.org/#)
 * [Bootstrap](http://getbootstrap.com/)
+
+Useful Commands:
+----------
+* heroku open
+* git push origin master - GitHub
+* git push heroku master - deploy to Heroku
+* heroku login
+* npm start - run locally
