@@ -20,12 +20,12 @@
     <md-toolbar>
       <div class="md-toolbar-tools">
         <h2>
-          <span>MOC</span>
+          MOC
         </h2>
         
         <span flex="5"></span>
 
-        <md-tabs class="md-primary" 
+        <md-tabs class="md-primary md-padding" 
                  md-border-bottom
                  md-selected="appCtrl.myState.tabIndex">
           <md-tab ng-repeat="tab in appCtrl.tabs"
@@ -40,6 +40,7 @@
                    ng-repeat="button in appCtrl.buttons"
                    aria-label="{{button.label}}"
                    href="{{button.href}}">
+          <md-tooltip>{{button.label}}</md-tooltip>
           <md-icon md-svg-src="{{button.icon}}" class="fillFix"></md-icon>
         </md-button>
       </div>
