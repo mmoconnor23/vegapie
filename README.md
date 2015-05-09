@@ -17,6 +17,7 @@ Useful Links:
 * [GitHub Markdown Guide](https://guides.github.com/features/mastering-markdown/)
 * [Angular Material Design](https://material.angularjs.org/#)
 * [Bootstrap](http://getbootstrap.com/)
+* [CSS Hover](http://tympanus.net/Tutorials/OriginalHoverEffects/index.html)
 
 Useful Commands:
 ----------

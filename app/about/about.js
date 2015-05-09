@@ -8,7 +8,3 @@ angular.module('mySite.about', ['ui.router'])
   	templateUrl: 'about/about.tpl.html'
   });
  });
-
-//.controller('aboutCtrl', [function() {
-//
-//}]);
