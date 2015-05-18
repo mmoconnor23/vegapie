@@ -1,8 +1,9 @@
 <md-tabs class="md-primary md-hue-1">
 	<md-tab ng-repeat="tab in techCtrl.techTabs"
-			label="{{tab.label}}">
-		<md-content class="md-padding">
+			label="{{tab.label}}"
+			ui-sref="{{tab.link}}">
 			<div ui-view></div>
-		</md-content>
 	</md-tab>
 </md-tabs>
+
+

@@ -1,17 +1,17 @@
-<!-- <img src="img/grad_pic.jpg"> -->
-
-<div ng-controller="aboutCtrl as ctrl">
+<md-content class="md-padding" ng-controller="aboutCtrl as ctrl">
   <md-grid-list
-        md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6"
+        md-cols-sm="1" md-cols-md="3" md-cols-gt-md="5"
         md-row-height-gt-md="1:1" md-row-height="4:3"
-        md-gutter="2px" md-gutter-gt-sm="4px" >
+        md-gutter="8px" md-gutter-gt-sm="4px" >
     <md-grid-tile ng-repeat="pic in ctrl.aboutMe">
-      <div class="view view-first" style="height:{{pic.height}}px;width:{{pic.width}}px">
-      	  <img src="{{pic.picLocation}}"/>
+      <div class="view view-first" 
+      	   style="height:{{pic.height}}px;width:{{pic.width}}px">
+      	  <img ng-src="{{pic.picLocation}}"
+      	  	   style="height:100%;width:100%"/>
 	      <div class="mask">
 	      	<p>{{pic.text}}</p>
 	      </div>
 	    </div>
     </md-grid-tile>
   </md-grid-list>
-</div>
+</md-content>

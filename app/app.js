@@ -6,8 +6,8 @@ angular.module('mySite', [
   'mySite.tech',
   'mySite.about',
   'mySite.job',
-  'ui.router',
-  'ngMaterial'
+  'ngMaterial',
+  'ui.router'
 ])
 .run( [ '$state', function( $state ) {
 	$state.transitionTo( 'home' );

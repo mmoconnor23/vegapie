@@ -1,20 +1,22 @@
 'use strict';
 
-function techCtrl() {
+function techCtrl( $state ) {
 	var vm = this;
+
+	$state.transitionTo( 'tech.coursework' );
 
 	vm.techTabs = [
 		{
 			label: 'Coursework',
-			tpl: 'tech/coursework/coursework.tpl.html'
+			link: 'tech.coursework'
 		},
 		{
 			label: 'Skills',
-			tpl: 'tech/skills/skills.tpl.html'
+			link: 'tech.skills'
 		},
 		{
 			label: 'Projects',
-			tpl: 'tech/projects/projects.tpl.html'
+			link: 'tech.projects'
 		}
 	];
 
@@ -23,7 +25,7 @@ function techCtrl() {
 	}
 }
 
-techCtrl.$inject = [];
+techCtrl.$inject = [ '$state' ];
 
 angular.module( 'mySite.tech' )
 .controller( 'techCtrl', techCtrl );

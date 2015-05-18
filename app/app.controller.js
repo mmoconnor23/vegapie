@@ -48,15 +48,15 @@ function appCtrl( appState ) {
 		}
 	];
 
-	vm.onTabSelected = function( tab ) {
-		//console.log( tab );
-		console.log( 'selected: ' + vm.selectedTabIndex );
-	};
+	// vm.onTabSelected = function( tab ) {
+	// 	//console.log( tab );
+	// 	console.log( 'selected: ' + vm.selectedTabIndex );
+	// };
 
-	vm.onTabDeselected = function( tab ) {
-		//console.log( tab );
-		console.log( 'deselected: ' + vm.selectedTabIndex );
-	};
+	// vm.onTabDeselected = function( tab ) {
+	// 	//console.log( tab );
+	// 	console.log( 'deselected: ' + vm.selectedTabIndex );
+	// };
 }
 
 appCtrl.$inject = [ 'appState' ];

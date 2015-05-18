@@ -1,14 +1,10 @@
 'use strict';
 
-angular.module('mySite.tech', ['ui.router'])
+angular.module( 'mySite.tech' )
 
 .config( function( $stateProvider ) {
   $stateProvider.state( 'tech.projects', {
-  	url: 'projects',
+  	url: '/projects',
   	templateUrl: 'tech/projects/projects.tpl.html'
   });
  });
-
-//.controller('techCtrl', [function() {
-//
-//}]);
