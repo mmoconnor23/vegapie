@@ -8,6 +8,7 @@
           <h3>{{ course.number }}</h3>
           <h4>{{ course.name }}</h4>
           <p><a href="{{ course.link }}">Course Link</a></p>
+          <p ng-if="course.paper"><a href="{{ course.paper }}">Research Paper</a></p>
         </div>
         <md-divider ng-if="!$last"></md-divider>
       </md-list-item>

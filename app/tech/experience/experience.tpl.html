@@ -1,0 +1,22 @@
+<md-content>
+    <md-list>
+      <md-list-item class="md-3-line"
+      				ng-repeat="job in ctrl.jobs">
+        <img ng-src="{{job.logo}}" class="md-avatar"/>
+        <div class="md-list-item-text">
+          <h2 class="md-display-1">{{ job.name }}</h2>
+          <h3 class="md-headline">{{ job.position }}</h3>
+          <h3 class="md-headline">{{ job.start }} - {{ job.end }} </h3>
+          <p><a class="md-subhead"
+                href="{{ job.link }}">Company Website</a></p>
+          <ul>
+            <li class="md-body-1" 
+                ng-repeat="bullet in job.bullets">
+              {{ bullet }}
+            </li>
+          </ul>
+        </div>
+        <md-divider ng-if="!$last"></md-divider>
+      </md-list-item>
+    </md-list>
+  </md-content>

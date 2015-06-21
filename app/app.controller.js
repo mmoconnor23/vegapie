@@ -3,8 +3,8 @@
 function appCtrl( appState ) {
 	var vm = this;
 	
-	vm.myState = appState.getAppState();
-	vm.selectedTabIndex = vm.myState.selectedTabIndex;
+	//vm.myState = appState.getAppState();
+	//vm.selectedTabIndex = vm.myState.selectedTabIndex;
 
 	vm.tabs = [
 		{
@@ -42,7 +42,7 @@ function appCtrl( appState ) {
 			icon: 'img/webicons-master/webicons/webicon-linkedin.svg'
 		},
 		{
-			label: 'Gmail',
+			label: 'E-mail me',
 			href: 'mailto:mmoconnor23@gmail.com',
 			icon: 'img/webicons-master/webicons/webicon-mail.svg'
 		}

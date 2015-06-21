@@ -6,14 +6,11 @@
   <title>Melissa Mattingly</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--<link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">-->
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.0/angular-material.min.css">
-  <!--<link rel="stylesheet" href="bower_components/angular-material/angular-material.css">-->
+
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
   <link rel="stylesheet" href="app.css">
   <link rel="stylesheet" href="home/home.css">
   <link rel="stylesheet" href="about/about.css">
-  <!--<script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>-->
 </head>
 <body ng-app="mySite" ng-controller="appCtrl as appCtrl">
 
@@ -29,8 +26,7 @@
         <md-tabs class="md-primary" 
                  md-dynamic-height
                  md-border-bottom
-                 flex
-                 md-selected="appCtrl.myState.tabIndex">
+                 flex>
           <md-tab ng-repeat="tab in appCtrl.tabs"
                   label="{{tab.name}}"
                   ui-sref="{{tab.link}}">
@@ -51,26 +47,14 @@
 
   </md-content>
 
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.js"></script>
+  <script src="bower_components/angular-material/angular-material.js"></script>
   
-
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
-  <!--<script src="bower_components/angular/angular.js"></script>-->
-  <!--<script src="bower_components/angular-route/angular-route.js"></script>-->
-  <!--<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>-->
-  <!--<script src="bower_components/jquery/dist/jquery.js"></script>-->
-  <!--<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>-->
-  <!--<script src="bower_components/angular-animate/angular-animate.js"></script>-->
-  <!--<script src="bower_components/angular-aria/angular-aria.js"></script>-->
-  <!--<script src="bower_components/angular-material/angular-material.js"></script>-->
-
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.14/angular-ui-router.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-animate.min.js"></script>
-  <script src="http://cdn.jsdelivr.net/angularjs/1.3.5/angular-aria.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.0/angular-material.min.js"></script>
   <script src="app.js"></script>
   <script src="app.controller.js"></script>
   <script src="home/home.js"></script>
@@ -84,7 +68,8 @@
   <script src="tech/coursework/coursework.controller.js"></script>
   <script src="tech/skills/skills.js"></script>
   <script src="tech/skills/skills.controller.js"></script>
-  <script src="job/job.js"></script>
+  <script src="tech/experience/experience.js"></script>
+  <script src="tech/experience/experience.controller.js"></script>
   <script src="components/appState/appState.service.js"></script>
 </body>
 </html>

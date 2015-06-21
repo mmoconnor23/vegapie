@@ -3,9 +3,13 @@
 function techCtrl( $state ) {
 	var vm = this;
 
-	$state.transitionTo( 'tech.coursework' );
+	$state.transitionTo( 'tech.experience' );
 
 	vm.techTabs = [
+		{
+			label: 'Technical Experience', 
+			link: 'tech.experience'
+		},
 		{
 			label: 'Coursework',
 			link: 'tech.coursework'

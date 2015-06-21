@@ -1,4 +1,4 @@
-md-grid-tile-header {
+/*md-grid-tile-header {
 	background: #D1C4E9;
 	border-radius: 5px;
 	text-align: center;
@@ -24,4 +24,8 @@ md-grid-tile-header figcaption {
 .tile button {
 	margin-left: auto;
 	margin-right: auto;
+}*/
+
+#home-card {
+	background: linear-gradient(white, #EDE7F6, #D1C4E9, #B39DDB, #9575CD, #673AB7);
 }
