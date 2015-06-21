@@ -1,6 +1,7 @@
 var express = require( 'express' );
 var server = express();
 
+server.use( express.static( __dirname + '/bower_components' ) );
 server.use( express.static( __dirname + '/app' ) );
 
 var port = process.env.PORT;
