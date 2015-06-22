@@ -9,6 +9,7 @@ function experienceCtrl( ) {
       position: 'Software Engineer',
       start: 'June 2014', 
       end: 'Present',
+      location: 'New York, NY',
       link: 'www.factset.com',
       logo: 'img/factsetF.png',
       bullets: [ 'Front-end web development for the UI layer of an application. Workflow follows scrum methods and principles.',

@@ -1,11 +1,11 @@
-<md-content class="md-padding" ng-controller="aboutCtrl as ctrl">
+<md-content class="md-padding home-card" ng-controller="aboutCtrl as ctrl">
   <md-grid-list
-        md-cols-sm="1" md-cols-md="3" md-cols-gt-md="5"
+        md-cols-sm="2" md-cols-md="3" md-cols-gt-md="3"
         md-row-height-gt-md="1:1" md-row-height="4:3"
         md-gutter="8px" md-gutter-gt-sm="4px" >
-    <md-grid-tile ng-repeat="pic in ctrl.aboutMe">
-      <div class="view view-first" 
-      	   style="height:{{pic.height}}px;width:{{pic.width}}px">
+    <md-grid-tile ng-repeat="pic in ctrl.aboutMe" 
+    	md-rowspan="{{pic.width > pic.height ? 1 : 1.75}}">
+      <div class="view view-first">
       	  <img ng-src="{{pic.picLocation}}"
       	  	   style="height:100%;width:100%"/>
 	      <div class="mask">

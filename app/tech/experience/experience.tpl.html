@@ -1,12 +1,12 @@
-<md-content>
+<md-content class="home-card">
     <md-list>
       <md-list-item class="md-3-line"
       				ng-repeat="job in ctrl.jobs">
         <img ng-src="{{job.logo}}" class="md-avatar"/>
         <div class="md-list-item-text">
           <h2 class="md-display-1">{{ job.name }}</h2>
-          <h3 class="md-headline">{{ job.position }}</h3>
-          <h3 class="md-headline">{{ job.start }} - {{ job.end }} </h3>
+          <h3 class="md-headline" style="color:#311B92"><b>{{ job.position }} - {{ job.location }}</b></h3>
+          <h3 class="md-headline" style="color:#311B92"><em>{{ job.start }} - {{ job.end }}</em></h3>
           <p><a class="md-subhead"
                 href="{{ job.link }}">Company Website</a></p>
           <ul>

@@ -40,4 +40,8 @@ h2 {
   margin: 5px;
 }
 
-
+.home-card {
+  background: linear-gradient(white, #EDE7F6, #D1C4E9, #B39DDB);
+  height: 750px;
+  color: #311B92;
+}

@@ -5,18 +5,18 @@ function aboutCtrl( appState ) {
 
 	vm.aboutMe = [
 		{
-			picLocation: 'img/grad_pic.jpg',
+			picLocation: 'img/meandfrog.jpg',
 			text: 'I graduated from Swarthmore College in June 2014 ' +
 					'with a B.A. in computer science.',
-			height: 168,
-			width: 168
+			height: 300,
+			width: 269
 		},
 		{
 			picLocation: 'img/theta.jpg',
 			text: 'I was a member of the Alpha Beta chapter of Kappa ' +
 					'Alpha Theta while in college.',
 			height: 225,
-			width: 300
+			width: 325
 		},
 		{
 			picLocation: 'img/softball.jpg',
@@ -25,6 +25,12 @@ function aboutCtrl( appState ) {
 					'college. I\'ll always be a princess pitcher.',
 			height: 300,
 			width: 269
+		},
+		{
+			picLocation: 'img/mattingly.jpg',
+			text: 'Here I am with my namesake, Don Mattingly.',
+			height: 320,
+			width: 250
 		},
 		{
 			picLocation: 'img/dodgeball.jpg',
@@ -48,12 +54,6 @@ function aboutCtrl( appState ) {
 			text: 'My family means so much to me! <3',
 			height: 275,
 			width: 325
-		},
-		{
-			picLocation: 'img/mattingly.jpg',
-			text: 'Here I am with my namesake, Don Mattingly.',
-			height: 320,
-			width: 250
 		}
 	];
 }
