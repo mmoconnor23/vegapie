@@ -5,7 +5,7 @@ function aboutCtrl( appState ) {
 
 	vm.aboutMe = [
 		{
-			picLocation: 'img/meandfrog.jpg',
+			picLocation: 'img/meandfrog.JPG',
 			text: 'I graduated from Swarthmore College in June 2014 ' +
 					'with a B.A. in computer science.',
 			height: 300,
