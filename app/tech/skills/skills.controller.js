@@ -77,6 +77,10 @@ function skillsCtrl( ) {
         {
           name: 'Bower',
           link: 'http://bower.io'
+        },
+        {
+          name: 'Git', 
+          link: 'http://www.git-scm.com/'
         }
       ]
     }
