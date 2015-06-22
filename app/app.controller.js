@@ -18,10 +18,6 @@ function appCtrl( appState ) {
 		{
 			name: 'Tech',
 			link: 'tech'
-		},
-		{
-			name: 'Work Experience',
-			link: 'job'
 		}
 	];
 
