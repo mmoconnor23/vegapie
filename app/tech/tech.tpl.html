@@ -1,4 +1,6 @@
-<md-tabs class="md-primary md-hue-1">
+<md-tabs class="md-primary md-hue-1"
+         md-dynamic-height
+         md-border-bottom>
 	<md-tab ng-repeat="tab in techCtrl.techTabs"
 			label="{{tab.label}}"
 			ui-sref="{{tab.link}}">
