@@ -7,15 +7,24 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
   <link rel="stylesheet" href="app.css">
-  <link rel="stylesheet" href="home/home.css">
-  <link rel="stylesheet" href="about/about.css">
-  <link href='http://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+  <link href="http://fonts.googleapis.com/css?family=Handlee" rel="stylesheet" type='text/css'>
 </head>
-<body ng-app="mySite" ng-controller="appCtrl as appCtrl">
+<body ng-app="vegapie" ng-controller="appCtrl as appCtrl">
 
-  Welcome to vegapie-recipe!
+<!-- header, tabs, button to add new recipe -->
+  <uib-tabset active="active">
+    <uib-tab ng-repeat="tab in appCtrl.tabs"
+             index="$index" 
+             heading="{{tab.title}}"
+             ui-sref="{{tab.route}}">
+      <div ui-view></div>
+    </uib-tab>
+  </uib-tabset>
+
+  <add-recipe></add-recipe>
 
 <!--<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -32,10 +41,17 @@
   <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular-animate/angular-animate.js"></script>
-  <script src="bower_components/angular-aria/angular-aria.js"></script>
-  <script src="bower_components/angular-material/angular-material.js"></script>
-  
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="bower_components/lodash/dist/lodash.min.js"></script>
+  <script src="about/about.js"></script>
+  <script src="recipes/recipes.js"></script>
+  <script src="home/home.js"></script>
   <script src="app.js"></script>
   <script src="app.controller.js"></script>
+  <script src="add-recipe/add-recipe.dir.js"></script>
+  <script src="add-recipe/add-recipe.controller.js"></script>
+
 </body>
 </html>
