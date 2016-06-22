@@ -20,7 +20,8 @@ mongo.MongoClient.connect(mongoURI, function(err, db) {
 	});
 });
 
-server.use(express.static( __dirname + '/app' ));
+server.use(express.static(__dirname + '/app'));
+server.use(express.static(__dirname + '/node_modules'));
 
 server.post('/addrecipe', function(req, res) {
 	//add to database
