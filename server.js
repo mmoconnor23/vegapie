@@ -29,8 +29,8 @@ server.post('/addrecipe', function(req, res) {
 	res.send('[200]SUCCESS Add Recipe ');
 });
 
-// var port = process.env.PORT;
-var port = 5000;
+var port = process.env.PORT;
+// var port = 5000;
 
 server.listen(port, function() {
   console.log( 'server listening on port ' + port );
