@@ -4,8 +4,7 @@ angular.module('vegapie')
 		restrict: 'E',
 		templateUrl: 'add-recipe/add-recipe.tpl.html',
 		scope: {},
-		controller: 'addRecipeCtrl',
-		controllerAs: 'ctrl',
+		controller: 'addRecipeCtrl as ctrl',
 		bindToController: true
 	};
 });

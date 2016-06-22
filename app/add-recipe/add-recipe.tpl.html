@@ -30,6 +30,7 @@
 	      		   class="form-control">
 
 	      	<label>Category</label>
+	      	<!-- not compatible with safari -->
 	        <input list="categories" name="category">
 				<datalist id="categories">
 				  <option value="Breakfast">
@@ -41,6 +42,7 @@
 				</datalist>
 
 			<input type="submit"
+					ng-click="ctrl.addRecipe()"
 				   class="form-control">
 	    </div>
     </form>
