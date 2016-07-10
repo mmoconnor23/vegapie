@@ -3,7 +3,7 @@ var express = require('express');
 var mongo = require('mongodb');
 var server = express();
 
-var mongoURI = 'mongodb://heroku_6l4h524x:qqpf1r876ooc9515bnv1ng60hq@ds021434.mlab.com:21434/heroku_6l4h524x';
+var mongoURI = process.ENV.MONGOLAB_URI;//'mongodb://heroku_6l4h524x:qqpf1r876ooc9515bnv1ng60hq@ds021434.mlab.com:21434/heroku_6l4h524x';
 
 mongo.MongoClient.connect(mongoURI, function(err, db) {
 	if (err) {
@@ -21,8 +21,10 @@ mongo.MongoClient.connect(mongoURI, function(err, db) {
 });
 
 //TODO: serve all the files!!!
-server.use(express.static(__dirname + '/app'));
-server.use(express.static(__dirname + '/node_modules'));
+server.use([
+	express.static(__dirname + '/app'), 
+	express.static(__dirname + '/node_modules')
+]);
 
 server.post('/addrecipe', function(req, res) {
 	//add to database
