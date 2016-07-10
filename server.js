@@ -20,6 +20,7 @@ mongo.MongoClient.connect(mongoURI, function(err, db) {
 	});
 });
 
+//TODO: serve all the files!!!
 server.use(express.static(__dirname + '/app'));
 server.use(express.static(__dirname + '/node_modules'));
 
