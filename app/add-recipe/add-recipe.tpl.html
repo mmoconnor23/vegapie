@@ -7,44 +7,53 @@
 </button>
 
 <script type="text/ng-template" id="add-form.html">
-    <form action="" method="">
 	    <div class="form-group">
-	        <label>Name</label>
+	    	<label>Contributor</label>
 	        <input type="text" 
-	      		   ng-model="ctrl.name" 
+	      		   ng-model="ctrl.contributor" 
+	      		   class="form-control">
+
+	        <label>Title</label>
+	        <input type="text" 
+	      		   ng-model="ctrl.title" 
 	      		   class="form-control">
 
 	      	<label>Ingredients</label>
-	        <input type="text" 
-	      		   ng-model="ctrl.ingredients" 
-	      		   class="form-control">
+	        <textarea rows="4" 
+	      		   	  ng-model="ctrl.ingredients" 
+	      		   	  class="form-control"></textarea>
 
 	      	<label>Steps</label>
-	        <input type="text" 
-	      		   ng-model="ctrl.steps" 
-	      		   class="form-control">
+	        <textarea rows="4" 
+	      		   	  ng-model="ctrl.steps" 
+	      		   	  class="form-control"></textarea>
 
-	      	<label>Other notes</label>
-	        <input type="text" 
-	      		   ng-model="ctrl.other" 
-	      		   class="form-control">
+	      	<label>Description/Other notes</label>
+	        <textarea rows="4" 
+	      		   	  ng-model="ctrl.description" 
+	      		   	  class="form-control"></textarea>
 
 	      	<label>Category</label>
 	      	<!-- not compatible with safari -->
 	        <input list="categories" name="category">
 				<datalist id="categories">
 				  <option value="Breakfast">
+				  <option value="Appetizer">
 				  <option value="Dessert">
 				  <option value="Pasta">
 				  <option value="Soup">
 				  <option value="Casserole">
 				  <option value="Sandwich">
+				  <option value="Entree (other)">
 				</datalist>
 
+			<!-- isVegetarian checkbox -->
+
+			<input>Images
+
 			<input type="submit"
-					ng-click="ctrl.addRecipe()"
+				   ng-click="ctrl.addRecipe()"
 				   class="form-control">
 	    </div>
-    </form>
     {{ctrl.name}}
 </script>

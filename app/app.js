@@ -9,8 +9,8 @@ angular.module('vegapie', [
   'ui.bootstrap'
 ])
 .run( [ '$state', function( $state ) {
-	$state.transitionTo( 'home' );
+	$state.transitionTo( 'recipes' );
 }])
 .config( [ '$urlRouterProvider', function( $urlRouterProvider ) {
-  $urlRouterProvider.otherwise( 'home' );
+  $urlRouterProvider.otherwise( 'recipes' );
 }]);

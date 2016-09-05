@@ -1,2 +1,25 @@
 /* app css stylesheet */
+.recipes-view {
+	display: flex;
+}
 
+.recipes-view .categories {
+	width: 20%;
+}
+
+.recipes-view .all-recipes {
+	width: 80%;
+}
+
+.recipes-view .all-recipes input {
+	width: 100%;
+}
+
+.recipe-preview {
+	height: 100px;
+}
+
+.recipe-preview:hover {
+	background-color: lavender;
+	color: blue;
+}

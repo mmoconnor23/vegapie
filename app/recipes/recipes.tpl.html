@@ -1,1 +1,43 @@
-Recipes here
+<div class="recipes-view">
+	<div class="categories">
+		<div ng-repeat="category in ctrl.categories"
+			 ng-click="ctrl.filterByCategory(category.value)">
+		    <label>
+	      		<input type="checkbox" 
+	      			   ng-model="ctrl.selectedCategories[category.value]">
+	      			{{category.display}}
+	    	</label>
+    	</div>
+
+    	<label>
+    		<input type="checkbox" 
+    			   ng-model="ctrl.isVegetarian"
+    			   ng-click="ctrl.filterVegetarian()">
+    		Vegetarian
+    	</label>
+	</div>
+
+	<div class="all-recipes">
+		<input type="text"
+			   placeholder="Search..."
+			   ng-model="ctrl.searchText"
+			   ng-change="ctrl.searchRecipes()">
+
+		<div class="recipe-preview"
+		     ng-repeat="recipe in ctrl.recipes"
+			 uib-popover-template="'recipe.html'"
+			 popover-title="{{recipe.title}}">
+			<div>
+				<b>{{recipe.title}}</b> - <i>{{recipe.contributor}}</i>
+			</div>
+			<div>
+				<img src="img/webicons-master/webicons/webicon-android.png">
+				<span>{{recipe.description}}</span>
+			</div>
+		</div>
+	</div>	
+</div>
+
+<script type="text/ng-template" id="recipe.html">
+	{{recipe.description}}
+</script>
