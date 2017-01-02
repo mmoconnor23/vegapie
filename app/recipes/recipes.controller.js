@@ -24,7 +24,7 @@ function RecipesCtrl(recipeData) {
 	};
 }
 
-AddRecipeCtrl.$inject = [
+RecipesCtrl.$inject = [
 	'recipeData'
 ];
 

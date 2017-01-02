@@ -1,6 +1,8 @@
 function AddRecipeCtrl($http) {
 	var _this = this;
 
+	var uniqueId = 0;
+
 	_this.addRecipe = function() {
 		console.log(_this.contributor);
 		$http({
@@ -13,6 +15,7 @@ function AddRecipeCtrl($http) {
 				steps: _this.steps,
 				description: _this.description,
 				category: _this.category,
+				id: uniqueId++, //TODO: generate unique recipe id
 			}
 		}).then(function(response) {
 			console.log(response);

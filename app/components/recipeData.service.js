@@ -32,8 +32,19 @@ function recipeData($q) {
 		steps: ['Step 1', 'Step 2', 'Step 3'],
 		ingredients: ['Ingredient 1', 'Ingredient 2', 'Ingredient 3'],
 		pictures: ['img1', 'img2'],
-		category: 'entree',
+		category: 'appetizer',
 		isVegetarian: true,
+		id: 0,
+		description: 'This is a sample recipe. I will use it to test the styling of the display page.'
+	}, {
+		title: 'Sample Recipe Title',
+		contributor: 'Melissa O\'Connor',
+		steps: ['Step 1', 'Step 2', 'Step 3'],
+		ingredients: ['Ingredient 1', 'Ingredient 2', 'Ingredient 3'],
+		pictures: ['img1', 'img2'],
+		category: 'dessert',
+		isVegetarian: true,
+		id: 1,
 		description: 'This is a sample recipe. I will use it to test the styling of the display page.'
 	}, {
 		title: 'Sample Recipe Title',
@@ -43,15 +54,7 @@ function recipeData($q) {
 		pictures: ['img1', 'img2'],
 		category: 'entree',
 		isVegetarian: true,
-		description: 'This is a sample recipe. I will use it to test the styling of the display page.'
-	}, {
-		title: 'Sample Recipe Title',
-		contributor: 'Melissa O\'Connor',
-		steps: ['Step 1', 'Step 2', 'Step 3'],
-		ingredients: ['Ingredient 1', 'Ingredient 2', 'Ingredient 3'],
-		pictures: ['img1', 'img2'],
-		category: 'entree',
-		isVegetarian: true,
+		id: 2,
 		description: 'This is a sample recipe. I will use it to test the styling of the display page.'
 	}, {
 		title: 'Sample Recipe Title',
@@ -61,6 +64,7 @@ function recipeData($q) {
 		pictures: ['img1', 'img2'],
 		category: 'entree',
 		isVegetarian: false,
+		id: 3,
 		description: 'This is a sample recipe. I will use it to test the styling of the display page.'
 	}, {
 		title: 'Sample Recipe Title',
@@ -70,6 +74,7 @@ function recipeData($q) {
 		pictures: ['img1', 'img2'],
 		category: 'entree',
 		isVegetarian: false,
+		id: 4,
 		description: 'This is a sample recipe. I will use it to test the styling of the display page.'
 	}];
 
