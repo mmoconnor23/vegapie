@@ -1,4 +1,4 @@
-function RecipesCtrl(recipeData) {
+function RecipesCtrl(recipeData, $state) {
 	var _this = this;
 	var allRecipes;
 
@@ -22,10 +22,15 @@ function RecipesCtrl(recipeData) {
 			_this.recipes = allRecipes;
 		}
 	};
+
+	_this.switchViewTo = (id) => {
+		$state.go('^.viewRecipe', {recipeId: id});
+	};
 }
 
 RecipesCtrl.$inject = [
-	'recipeData'
+	'recipeData', 
+	'$state',
 ];
 
 angular

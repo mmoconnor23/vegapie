@@ -15,7 +15,7 @@ function AddRecipeCtrl($http) {
 				steps: _this.steps,
 				description: _this.description,
 				category: _this.category,
-				id: uniqueId++, //TODO: generate unique recipe id
+				id: (uniqueId++).toString(), //TODO: generate unique recipe id
 			}
 		}).then(function(response) {
 			console.log(response);

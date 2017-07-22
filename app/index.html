@@ -15,6 +15,7 @@
 <body ng-app="vegapie" ng-controller="appCtrl as appCtrl">
 
 <!-- header, tabs, button to add new recipe -->
+<!--TODO: turn these into buttons instead of tabs, in a header-->
   <uib-tabset active="active">
     <uib-tab ng-repeat="tab in appCtrl.tabs"
              index="$index" 
@@ -24,17 +25,7 @@
     </uib-tab>
   </uib-tabset>
 
-<!--<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-47897533-2', 'auto');
-  ga('send', 'pageview');
-
-</script>-->
-
+  <!--<script src="bower_components/vue/dist/vue.js"></script>-->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -43,16 +34,17 @@
   <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
   <script src="bower_components/lodash/dist/lodash.min.js"></script>
-  <script src="about/about.js"></script>
-  <script src="recipes/recipes.js"></script>
-  <script src="home/home.js"></script>
+  <script src="src/about/about.js"></script>
+  <script src="src/recipes/recipes.js"></script>
+  <script src="src/viewRecipe/viewRecipe.js"></script>
+  <script src="src/home/home.js"></script>
   <script src="app.js"></script>
   <script src="app.controller.js"></script>
-  <script src="add-recipe/add-recipe.dir.js"></script>
-  <script src="add-recipe/add-recipe.controller.js"></script>
-  <script src="components/recipeData.service.js"></script>
-  <script src="recipes/recipes.controller.js"></script>
-  <script src="recipes/viewRecipe/viewRecipe.controller.js"></script>
+  <script src="src/add-recipe/add-recipe.dir.js"></script>
+  <script src="src/add-recipe/add-recipe.controller.js"></script>
+  <script src="src/components/recipeData.service.js"></script>
+  <script src="src/recipes/recipes.controller.js"></script>
+  <script src="src/viewRecipe/viewRecipe.controller.js"></script>
 
 </body>
 </html>

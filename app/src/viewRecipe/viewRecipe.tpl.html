@@ -1,0 +1,35 @@
+<div class="recipe-title">
+  {{ctrl.recipe.title}}
+</div>
+<div class="recipe-pictures">
+  <!--carousel of pics-->
+  <button type="button">Insert a photo</button>
+</div>
+<div>
+  <div class="recipe-contributor">
+    Created by: {{ctrl.recipe.contributor}}
+  </div>
+  <div class="recipe-category">
+    Category: {{ctrl.category}}
+  </div>
+  <div class="recipe-description">
+    {{ctrl.description}}
+  </div>
+</div>
+<div class="recipe-ingredients">
+  <div class="recipe-ingredients-title">Ingredients</div>
+  <ul class="recipe-ingredients-list">
+    <li ng-repeat="item in ctrl.recipe.ingredients">
+      {{item}}
+    </li>
+  </ul>
+</div>
+<div class="recipe-steps">
+  <div class="recipe-steps-title">Steps</div>
+  <ol class="recipe-steps-list">
+    <li ng-repeat="item in ctrl.recipe.steps">
+      {{item}}
+    </li>
+  </ol>
+</div>
+<!--title, contributor, steps, ingredients, pictures, category, isVegetarian, id, description-->
