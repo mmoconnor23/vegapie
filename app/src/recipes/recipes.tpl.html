@@ -1,13 +1,15 @@
 <div class="recipes-view">
 	<div class="categories">
 		<div ng-repeat="category in ctrl.categories"
-			 ng-click="ctrl.filterByCategory(category.value)">
+			   ng-click="ctrl.filterByCategory()">
 		    <label>
 	      		<input type="checkbox" 
 	      			   ng-model="ctrl.selectedCategories[category.value]">
 	      			{{category.display}}
 	    	</label>
     	</div>
+
+			<!--TODO: put divider between other categories and vegetarian flag-->
 
     	<label>
     		<input type="checkbox" 
