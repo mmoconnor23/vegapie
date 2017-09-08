@@ -37,6 +37,7 @@ app.post('/addrecipe', function(req, res) {
 		incomingRecipe += chunk;
 	});
 
+	//TODO: instead, just post when it's been a success, promise chain on frontend will then fetch updates
 	req.on('end', function() {
 		recipes.insert([{
 			data: incomingRecipe,
@@ -46,8 +47,8 @@ app.post('/addrecipe', function(req, res) {
 			}
 
 			console.log('submitted a recipe!');
-			console.log(req.body);
-			res.send('[200]SUCCESS Add Recipe ');
+			console.log(result);
+			res.send('200');//'[200]SUCCESS Add Recipe');
 		});
 	});
 });

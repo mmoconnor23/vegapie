@@ -8,9 +8,9 @@ angular.module('vegapie', [
   'ui.router',
   'ui.bootstrap'
 ])
-.run( [ '$state', function( $state ) {
-	$state.transitionTo( 'recipes' );
+.run(['$state', ($state) => {
+  toastr.options.closeButton = true;
+  toastr.options.progressBar = true;
+  $state.transitionTo('recipes');
 }])
-.config( [ '$urlRouterProvider', function( $urlRouterProvider ) {
-  $urlRouterProvider.otherwise( 'recipes' );
-}]);
+.config(['$urlRouterProvider', ($urlRouterProvider) => $urlRouterProvider.otherwise('recipes')]);

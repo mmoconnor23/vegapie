@@ -1,37 +1,35 @@
-function RecipesCtrl(recipeData, $state) {
-	var _this = this;
-	var allRecipes;
+class RecipesCtrl {
+	constructor(recipeData,
+							$state) {
+	  'ngInject';
 
-	_this.categories = recipeData.getCategories();
+		this.$state = $state;
+		this.categories = recipeData.getCategories();
 
-	recipeData.getRecipes().then(function(recipes) {
-		allRecipes = _.cloneDeep(recipes);
-		_this.recipes = allRecipes;
-	});
+		recipeData.getRecipes().then((recipes) => {
+			this.allRecipes = _.cloneDeep(recipes);
+			this.recipes = this.allRecipes;
+		});
+	}
 
 	//TODO: persist state of checkboxes in service and re-initialize when setting view
 
-	_this.filterByCategory = function(category) {
-		console.log(_this.selectedCategories);
-	};
+	filterByCategory(category) {
+		console.log(this.selectedCategories);
+	}
 
-	_this.filterVegetarian = function() {
-		if (_this.isVegetarian) {
-			_this.recipes = _.filter(allRecipes, {isVegetarian: true});
+	filterVegetarian() {
+		if (this.isVegetarian) {
+			this.recipes = _.filter(this.allRecipes, {isVegetarian: true});
 		} else {
-			_this.recipes = allRecipes;
+			this.recipes = this.allRecipes;
 		}
-	};
+	}
 
-	_this.switchViewTo = (id) => {
-		$state.go('^.viewRecipe', {recipeId: id});
-	};
+	switchViewTo(id){
+		this.$state.go('^.viewRecipe', {recipeId: id});
+	}
 }
-
-RecipesCtrl.$inject = [
-	'recipeData', 
-	'$state',
-];
 
 angular
 	.module('vegapie')

@@ -1,30 +1,35 @@
-function AddRecipeCtrl($http) {
-	var _this = this;
+class AddRecipeCtrl {
+	constructor($http) {
+		'ngInject';
 
-	var uniqueId = 0;
+		this.$http = $http;
+		this.uniqueId = 0;
+	}
 
-	_this.addRecipe = function() {
-		console.log(_this.contributor);
-		$http({
+	addRecipe(recipe) {
+		console.log(recipe.contributor);
+		this.isOpen = false;
+		this.$http({
 			method: 'POST',
 			url: '/addrecipe',
 			data: {
-				contributor: _this.contributor,
-				title: _this.title,
-				ingredients: _this.ingredients,
-				steps: _this.steps,
-				description: _this.description,
-				category: _this.category,
-				id: (uniqueId++).toString(), //TODO: generate unique recipe id
+				contributor: recipe.contributor,
+				title: recipe.title,
+				ingredients: recipe.ingredients,
+				steps: recipe.steps,
+				description: recipe.description,
+				category: recipe.category,
+				id: (this.uniqueId++).toString(), //TODO: generate unique recipe id
 			}
-		}).then(function(response) {
+		}).then((response) => {
 			console.log(response);
-			//TODO: alert success
+			if (response.status === 200) {
+				toastr.success('Recipe posted');
+			}
+			//TODO: alert success, use a toast
 		});
 	};
 }
-
-AddRecipeCtrl.$inject = ['$http'];
 
 angular
 	.module('vegapie')

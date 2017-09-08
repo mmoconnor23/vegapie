@@ -1,59 +1,16 @@
 <button uib-popover-template="'add-form.html'" 
 		popover-title="Add a new recipe"
 		popover-placement="right-top" 
+		popover-is-open="ctrl.isOpen"
+		popover-trigger="outsideClick"
 		type="button" 
-		class="btn btn-default">
-	Add
+		class="btn btn-default"
+		id="btn-add-recipe">
+	+
 </button>
 
+<!--TODO: make this into a component, use it from a + button on any page, OR have it be a top level tab-->
 <script type="text/ng-template" id="add-form.html">
-	    <div class="form-group">
-	    	<label>Contributor</label>
-	        <input type="text" 
-	      		   ng-model="ctrl.contributor" 
-	      		   class="form-control">
-
-	        <label>Title</label>
-	        <input type="text" 
-	      		   ng-model="ctrl.title" 
-	      		   class="form-control">
-
-	      	<label>Ingredients</label>
-	        <textarea rows="4" 
-	      		   	  ng-model="ctrl.ingredients" 
-	      		   	  class="form-control"></textarea>
-
-	      	<label>Steps</label>
-	        <textarea rows="4" 
-	      		   	  ng-model="ctrl.steps" 
-	      		   	  class="form-control"></textarea>
-
-	      	<label>Description/Other notes</label>
-	        <textarea rows="4" 
-	      		   	  ng-model="ctrl.description" 
-	      		   	  class="form-control"></textarea>
-
-	      	<label>Category</label>
-	      	<!-- not compatible with safari -->
-	        <input list="categories" name="category">
-				<datalist id="categories">
-				  <option value="Breakfast">
-				  <option value="Appetizer">
-				  <option value="Dessert">
-				  <option value="Pasta">
-				  <option value="Soup">
-				  <option value="Casserole">
-				  <option value="Sandwich">
-				  <option value="Entree (other)">
-				</datalist>
-
-			<!-- isVegetarian checkbox -->
-
-			<input>Images
-
-			<input type="submit"
-				   ng-click="ctrl.addRecipe()"
-				   class="form-control">
-	    </div>
+  <recipe-form on-submit="ctrl.addRecipe(recipe)"></recipe-form>
     {{ctrl.name}}
 </script>

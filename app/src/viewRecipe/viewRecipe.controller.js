@@ -1,18 +1,16 @@
-function ViewRecipesCtrl(recipeData, $stateParams) {
-	var _this = this;
+class ViewRecipesCtrl {
+	constructor(recipeData, 
+							$stateParams) {
+		'ngInject';
 
-	//TODO: why does this get called 3 times??
-	//wait for this before continuing
-	recipeData.getRecipeById($stateParams.recipeId).then((recipe) => {
-		_this.recipe = recipe;
-		console.log(_this.recipe);
-	});
+		//TODO: why does this get called 3 times??
+		//wait for this before continuing
+		recipeData.getRecipeById($stateParams.recipeId).then((recipe) => {
+			this.recipe = recipe;
+			console.log(this.recipe);
+		});
+	}
 }
-
-ViewRecipesCtrl.$inject = [
-	'recipeData',
-	'$stateParams',
-];
 
 angular
 	.module('vegapie')

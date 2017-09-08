@@ -8,21 +8,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="src/add-recipe/recipeForm/recipeForm.css">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
   <link href="http://fonts.googleapis.com/css?family=Handlee" rel="stylesheet" type='text/css'>
+  <link href="bower_components/toastr/toastr.css" rel="stylesheet"/>
 </head>
 <body ng-app="vegapie" ng-controller="appCtrl as appCtrl">
 
 <!-- header, tabs, button to add new recipe -->
 <!--TODO: turn these into buttons instead of tabs, in a header-->
-  <uib-tabset active="active">
+  <uib-tabset active="appCtrl.active">
     <uib-tab ng-repeat="tab in appCtrl.tabs"
              index="$index" 
              heading="{{tab.title}}"
              ui-sref="{{tab.route}}">
       <div ui-view></div>
     </uib-tab>
+
+    <add-recipe id="add-recipe-hover"></add-recipe>
   </uib-tabset>
 
   <!--<script src="bower_components/vue/dist/vue.js"></script>-->
@@ -34,6 +38,7 @@
   <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
   <script src="bower_components/lodash/dist/lodash.min.js"></script>
+  <script src="bower_components/toastr/toastr.min.js"></script>
   <script src="src/about/about.js"></script>
   <script src="src/recipes/recipes.js"></script>
   <script src="src/viewRecipe/viewRecipe.js"></script>
@@ -42,6 +47,7 @@
   <script src="app.controller.js"></script>
   <script src="src/add-recipe/add-recipe.dir.js"></script>
   <script src="src/add-recipe/add-recipe.controller.js"></script>
+  <script src="src/add-recipe/recipeForm/recipeForm.component.js"></script>
   <script src="src/components/recipeData.service.js"></script>
   <script src="src/recipes/recipes.controller.js"></script>
   <script src="src/viewRecipe/viewRecipe.controller.js"></script>

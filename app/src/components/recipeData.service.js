@@ -76,6 +76,26 @@ function recipeData($q) {
 		isVegetarian: false,
 		id: '4',
 		description: 'This is a sample recipe. I will use it to test the styling of the display page.'
+	}, {
+		title: 'Sample Recipe Title 5',
+		contributor: 'Melissa O\'Connor',
+		steps: ['Step 1', 'Step 2', 'Step 3'],
+		ingredients: ['Ingredient 1', 'Ingredient 2', 'Ingredient 3'],
+		pictures: ['img1', 'img2'],
+		category: 'entree',
+		isVegetarian: false,
+		id: '5',
+		description: 'This is a sample recipe. I will use it to test the styling of the display page.'
+	}, {
+		title: 'Sample Recipe Title 6',
+		contributor: 'Melissa O\'Connor',
+		steps: ['Step 1', 'Step 2', 'Step 3'],
+		ingredients: ['Ingredient 1', 'Ingredient 2', 'Ingredient 3'],
+		pictures: ['img1', 'img2'],
+		category: 'entree',
+		isVegetarian: false,
+		id: '6',
+		description: 'This is a sample recipe. I will use it to test the styling of the display page.'
 	}];
 
 	function getCategories() {
