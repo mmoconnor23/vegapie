@@ -18,16 +18,19 @@
 
 <!-- header, tabs, button to add new recipe -->
 <!--TODO: turn these into buttons instead of tabs, in a header-->
-  <uib-tabset active="appCtrl.active">
+  <uib-tabset active="appCtrl.active"
+              id="top-menu">
     <uib-tab ng-repeat="tab in appCtrl.tabs"
              index="$index" 
              heading="{{tab.title}}"
              ui-sref="{{tab.route}}">
-      <div ui-view></div>
     </uib-tab>
-
-    <add-recipe id="add-recipe-hover"></add-recipe>
   </uib-tabset>
+
+  <div ui-view
+       class="tab-content"></div>
+
+  <add-recipe id="add-recipe-hover"></add-recipe>
 
   <!--<script src="bower_components/vue/dist/vue.js"></script>-->
   <script src="bower_components/angular/angular.js"></script>
@@ -39,6 +42,7 @@
   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
   <script src="bower_components/lodash/dist/lodash.min.js"></script>
   <script src="bower_components/toastr/toastr.min.js"></script>
+  <script src="bower_components/angularjs-dropdown-multiselect/dist/angularjs-dropdown-multiselect.min.js"></script>
   <script src="src/about/about.js"></script>
   <script src="src/recipes/recipes.js"></script>
   <script src="src/viewRecipe/viewRecipe.js"></script>

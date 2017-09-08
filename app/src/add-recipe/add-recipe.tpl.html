@@ -1,6 +1,6 @@
 <button uib-popover-template="'add-form.html'" 
 		popover-title="Add a new recipe"
-		popover-placement="right-top" 
+		popover-placement="top-right" 
 		popover-is-open="ctrl.isOpen"
 		popover-trigger="outsideClick"
 		type="button" 
@@ -9,8 +9,8 @@
 	+
 </button>
 
-<!--TODO: make this into a component, use it from a + button on any page, OR have it be a top level tab-->
 <script type="text/ng-template" id="add-form.html">
-  <recipe-form on-submit="ctrl.addRecipe(recipe)"></recipe-form>
+  <recipe-form id="popover-recipe-form"
+	             on-submit="ctrl.addRecipe(recipe)"></recipe-form>
     {{ctrl.name}}
 </script>

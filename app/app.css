@@ -1,14 +1,42 @@
 /* app css stylesheet */
+body {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+#top-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+
+.tab-content {
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: relative;
+	top: 50px;
+}
+
 .recipes-view {
 	display: flex;
 }
 
 .recipes-view .categories {
 	width: 20%;
+	position: fixed;
+	top: 50px;
+	width: 150px;
 }
 
 .recipes-view .all-recipes {
 	width: 80%;
+	position: relative;
+	left: 150px; /*same as categories width*/
 }
 
 .recipes-view .all-recipes input {
@@ -24,6 +52,10 @@
 	color: blue;
 }
 
+.nav-tabs {
+	background-color: orange;
+}
+
 #btn-add-recipe {
 	border-radius: 50%;
 	background: limegreen;
@@ -34,7 +66,13 @@
 }
 
 #add-recipe-hover {
-	position: absolute;
+	position: fixed;
   bottom: 10px;
   right: 10px;
+}
+
+#popover-recipe-form .form-group {
+	height: 400px;
+	width: 200px;
+	overflow: auto;
 }

@@ -26,6 +26,16 @@ class RecipesCtrl {
 		}
 	}
 
+	searchRecipes() {
+		if (!this.searchText.length) {
+			this.recipes = this.allRecipes;
+		} else {
+			this.recipes = _.filter(this.allRecipes, (recipe) => {
+				return recipe.title.toLowerCase().includes(this.searchText.toLowerCase());
+			});
+		}
+	}
+
 	switchViewTo(id){
 		this.$state.go('^.viewRecipe', {recipeId: id});
 	}

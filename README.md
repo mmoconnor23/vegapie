@@ -14,6 +14,7 @@ Useful Links:
 * [Angular Material Design](https://material.angularjs.org/#)
 * [Bootstrap](http://getbootstrap.com/)
 * [CSS Hover](http://tympanus.net/Tutorials/OriginalHoverEffects/index.html)
+* [angularjs-dropdown-multiselect](http://dotansimha.github.io/angularjs-dropdown-multiselect/docs/#/main)
 
 Useful Commands:
 ----------

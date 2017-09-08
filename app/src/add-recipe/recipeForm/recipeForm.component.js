@@ -1,6 +1,14 @@
 class RecipeFormCtrl {
-  constructor() {
+  constructor(recipeData) {
     'ngInject';
+
+    this.categories = [];
+    this.categoryOptions = _.map(recipeData.getCategories(), (category) => {
+      return {
+        id: category.value,
+        label: category.display,
+      };
+    });
   }
 
   addRecipe() {
@@ -11,8 +19,8 @@ class RecipeFormCtrl {
         ingredients: this.ingredients,
         steps: this.steps,
         description: this.description,
-        //categories
-        //isVegetarian
+        categories: this.categories,
+        isVegetarian: this.isVegetarian,
       }
     });
   }

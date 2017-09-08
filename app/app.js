@@ -6,7 +6,8 @@ angular.module('vegapie', [
   'vegapie.recipes',
   'vegapie.about',
   'ui.router',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'angularjs-dropdown-multiselect'
 ])
 .run(['$state', ($state) => {
   toastr.options.closeButton = true;

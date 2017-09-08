@@ -26,21 +26,19 @@
 
     <label>Category</label>
     <!-- not compatible with safari -->
-    <input list="categories" name="category">
-  <datalist id="categories">
-    <option value="Breakfast">
-    <option value="Appetizer">
-    <option value="Dessert">
-    <option value="Pasta">
-    <option value="Soup">
-    <option value="Casserole">
-    <option value="Sandwich">
-    <option value="Entree (other)">
-  </datalist>
+    <div ng-dropdown-multiselect="" 
+         options="$ctrl.categoryOptions"
+         selected-model="$ctrl.categories"
+         extra-settings="{enableSearch: true}">
+    </div>
 
-  <!-- isVegetarian checkbox -->
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" ng-model="$ctrl.isVegetarian"> Is Vegetarian
+      </label>
+    </div>
 
-  <input>Images
+  <!--<input>Images-->
 
   <input type="submit"
       ng-click="$ctrl.addRecipe()"
